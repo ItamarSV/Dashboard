@@ -16,9 +16,9 @@
 #nav {
   padding: 30px;
 }
-#app {
+/* #app {
   margin-top: 60px !important;
-}
+} */
 #nav a {
   font-weight: bold;
   color: #2c3e50;
