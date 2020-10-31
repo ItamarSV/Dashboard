@@ -108,3 +108,4 @@ if __name__ == '__main__':
 
 
 # export PYTHONPATH=/Users/itamarsvisa/CodeBase/BooksApp:$PYTHONPATH 
+# export GOOGLE_APPLICATION_CREDENTIALS="key/itamarapp.json"

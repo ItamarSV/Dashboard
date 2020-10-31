@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Books from '@/components/Books.vue';
+import Books from './components/Books.vue';
 import Ping from './components/Ping.vue';
+import Main from './components/Main.vue';
 
 Vue.use(Router);
 
@@ -10,7 +11,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/Books',
       name: 'Books',
       component: Books,
     },
@@ -18,6 +19,11 @@ export default new Router({
       path: '/ping',
       name: 'Ping',
       component: Ping,
+    },
+    {
+      path: '/',
+      name: 'Main',
+      component: Main,
     },
   ],
 });
