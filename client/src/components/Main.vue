@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand class="mr-5">Itamar Svisa</b-navbar-brand>
 
         <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
@@ -10,7 +10,7 @@
           <b-navbar-nav class=" mt-1" pills>
             <b-nav-item class="mr-2" @click="Activenav('Home')" Active>Home</b-nav-item>
             <b-nav-item class="mr-2" @click="Activenav('Data Analysis')">Data Analysis</b-nav-item>
-            <b-nav-item class="mr-2" @click="Activenav('Active')">Active</b-nav-item>
+            <b-nav-item class="mr-2" @click="Activenav('Active')">About</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
@@ -39,13 +39,8 @@
         </b-collapse>
       </b-navbar>
     </div>
-    <button type="button" class="btn btn-primary">Main check</button>
-    <b-avatar icon="star-fill" size="4em"></b-avatar>
-    <b-avatar src="https://placekitten.com/300/300"></b-avatar>
-    <b-avatar src="dist/WebAvatar.jpg" size="6rem"></b-avatar>
-    <b-overlay :show="show" rounded="sm">
-      <itamartable v-if="activeNav==='Home'"></itamartable>
-    </b-overlay>
+    <button type="button" class="btn btn-primary">Main check {{show}}</button>
+    <itamartable v-if="this.activeNav==='Home'"> </itamartable>
   </div>
 </template>
 
@@ -70,7 +65,9 @@ export default {
       this.activeNav = nav;
     },
   },
-
+  // mounted() {
+  //   this.show = Table.data.finishloading;
+  // },
   created() {
   },
 };
